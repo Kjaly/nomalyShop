@@ -1,0 +1,160 @@
+<?php require "db.php";?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Montserrat:400,700&display=swap&subset=cyrillic-ext" rel="stylesheet">
+
+
+    <title>clrnomaly</title>
+
+    
+</head>
+
+<body>
+
+   
+
+
+    <header class="header">
+        <div class="container">
+            <div class="header_inner">
+                <div class="header_logo">
+                CLRnomaly
+                </div>
+                <div class="header__burger">
+                    <span></span>
+                </div>
+                <nav class="nav">
+                    <a class="nav__link" href="#what">About</a>
+                    <a class="nav__link" href="#">Service</a>
+                    <a class="nav__link" href="#nums">Work</a>
+                    <a class="nav__link" href="#">Blog</a>
+                    <a class="nav__link" href="#">Contact</a>
+                    <div class="authorise">
+                        <?php if(isset ($_SESSION['logged_user'])): ?>
+                           <a class="signin" href="#"> <?php echo $_SESSION['logged_user']->login; ?></a>
+                            <a class="signup" href="logout.php">Выйти</a>
+                            <?php else : ?>
+                        <a class="signin" href="signup.php" >LogIn</a>
+                        <a class="signup" href="signup.php" >SignUp</a>
+                         <?php endif; ?>
+                    </div>
+                </nav>
+                
+            </div>
+        </div>
+    </header>
+
+
+
+    <div class="intro">
+        <div class="container">
+            <div class="intro_inner">
+                <h2 class="intro_suptitle">Streetwear</h2>
+
+                <h1 class="intro_title">Welcome to ClrNomaly</h1>
+
+                <h3><img class="logo" src="images/kj2.png" alt=""></h3>
+                <a class="btn" href="#what">Learn More</a>
+            </div>
+
+        </div>
+    </div>
+
+    <section class="section">
+        <div class="container">
+
+            <div  class="section_header">
+                <h3  class="section_suptitle">What we do</h3>
+                <h2 id="what" class="section_title">Story about us</h2>
+                <div  class="section_text">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, provident molestiae, perferendis veniam cumque, consectetur at necessitatibus quisquam aut id facilis, distinctio. Dolorum dolores minus, optio, amet dignissimos asperiores architecto!()</p>
+                </div>
+            </div>
+
+            <div class="about">
+                <div class="about_item">
+                    <div class="about_img">
+                        <img src="images/about/ex/1.jpg" alt="">
+                    </div>
+                    <div class="about_text">quick</div>
+                </div>
+                <div class="about_item">
+                    <div class="about_img">
+                        <img src="images/about/ex/2.jpg" alt="">
+                    </div>
+                    <div class="about_text">there's a God.</div>
+                </div>
+
+                <div class="about_item">
+                    <div class="about_img">
+                        <img src="images/about/ex/3.jpg" alt="">
+
+                    </div>
+                    <div class="about_text">Smokers</div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <div class="statistics">
+        <div class="container">
+
+            <div id="nums"class="stat">
+                <div class="stat_item">
+                    <div class="stat_count">42</div>
+                    <div class="stat_text">Prints</div>
+                </div>
+                <div class="stat_item">
+                    <div class="stat_count">123</div>
+                    <div class="stat_text">happy client</div>
+                </div>
+                <div class="stat_item">
+                    <div class="stat_count">15</div>
+                    <div class="stat_text">Smokers</div>
+                </div>
+                <div class="stat_item">
+                    <div class="stat_count">99</div>
+                    <div class="stat_text">Cup of coffe</div>
+                </div>
+                <div class="stat_item">
+                    <div class="stat_count">1</div>
+                    <div class="stat_text">Members</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+
+<script
+  src="https://code.jquery.com/jquery-3.5.1.min.js"
+  integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+  crossorigin="anonymous"></script>
+<script src='scripts/main.js'></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
